@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(157, 157, 255);
+    background-image: linear-gradient(to right, rgba(5, 5, 52, 0.386), rgb(24, 22, 65));
+    font-family:'Lucida Sans', sans-serif;
+    color: rgb(199, 194, 210);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.nav h5{
+    font-size: 20px;
+}
+.nav a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.header{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgb(202, 202, 243);
+    box-shadow: rgb(1, 1, 19) 0px 0px 16px;
+}
+.header input{
+    margin: 30px;
+    width: 50%;
+    padding: 10px;
+    font-size:15px ;
+    background: rgb(215, 197, 243);
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.main{
+    border-bottom: 2px solid rgb(202, 202, 243);
+    box-shadow: rgb(28, 40, 52) 0px 20px 30px -10px
+
+}
+.expense{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;    
+    margin: 20px;
+    border-bottom: 2px solid rgb(73, 73, 148);
+
+}
+.expense p{
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.expense .button{
+    padding-right: 10px;
+    color: red;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.expense .button:hover{
+    color: rgb(254, 152, 152);
+}
+
+.add form{
+    margin: 20px;
+    display: grid;
+    grid-template-columns:  2fr;
+}
+.add form input{
+    padding: 10px;
+    background: rgb(215, 197, 243);
+    color: rgb(0, 0, 0);
+    border: none;
+    margin-bottom: 5px;
+}
+.add form button{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgb(125, 125, 237);
+    border: 1px solid rgb(38, 2, 80);
+    color: rgb(38, 2, 80);
+    
+}
+.add form button:hover{
+    background:transparent;
+    border:1px solid rgb(97, 97, 172);
+    color: rgb(141, 125, 195);
+}
+
+.hide-display{
+    display: none;
+}

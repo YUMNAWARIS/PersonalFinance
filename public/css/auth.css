@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(157, 157, 255);
+    background-image: linear-gradient(to right, rgba(5, 5, 52, 0.386), rgb(2, 0, 47));
+    text-align: center;
+    font-family:'Lucida Sans', sans-serif;
+    color: rgb(188, 163, 242);
+}
+
+.main-div{
+    background: white;
+    width: 35%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 150px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    color: black;
+}
+
+.form-heading{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.form input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+.form-input{
+    margin: 10px;
+}
+.form-input input{
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+    border:  none;
+    text-decoration: none;
+    background:transparent;
+    border-bottom: 1px solid blue;    
+}
+.check-form{
+    margin: 10px;
+    padding: 10px;
+    font-size :18px;
+}
+.check-form label{
+    margin-left: 3px;
+}
+.check-form a{
+    margin-left: 100px;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.check-form a:hover{
+    color: rgb(32, 29, 120);
+    text-decoration: none;
+}
+
+.submit{
+    margin: 10px;
+}
+.submit button{
+    width: 100%;
+    padding: 5px;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    background: blue;
+    border: 1px solid blue;
+    border-radius: 3px;
+}
+.submit button:hover{
+    color: white;
+    background-color: blue;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.end{
+    text-align: center;
+}
+.end a{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.end a:hover{
+    color: rgb(14, 13, 56);
+    text-decoration: none;
+}

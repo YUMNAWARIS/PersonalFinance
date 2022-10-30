@@ -1,0 +1,31 @@
+extends ../layouts/base.pug
+
+block title
+    title Details 
+
+block styles
+    link(rel="stylesheet", href="/css/expense.css")
+
+block main-body
+    .main
+        .header
+            h1 #{expense.DateAdded}
+            h2 #{expense.title.toUpperCase()}
+        .body
+            #desc
+                h3 Description
+                p #{expense.description}
+            #amount
+                .a
+                    h3 Amount 
+                    p #{expense.cost} 
+                    
+                .a
+                    h3 Tax 
+                    p #{expense.tax} 
+                    
+                .a
+                    h3 Total 
+                    p #{expense.total} 
+                    
+    

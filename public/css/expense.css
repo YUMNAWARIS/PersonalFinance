@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(157, 157, 255);
+    background-image: linear-gradient(to right, rgba(5, 5, 52, 0.386), rgb(24, 22, 65));
+    font-family:'Lucida Sans', sans-serif;
+    color: rgb(202, 194, 210);
+}
+
+.main{
+    background-color: rgb(160, 140, 191);
+    color: darkblue;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    box-shadow: rgb(0, 0, 0) 0px 54px 55px, rgba(0, 0, 0, 0.483) 0px -12px 30px, rgb(0, 0, 0) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header{
+    border-bottom: 2px solid purple;
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
+.header h1{
+    padding: 5px;
+}
+.header h2{
+    padding: 5px;
+}
+
+#desc{
+    padding: 5px;
+    border-bottom: 2px solid purple;
+}
+
+.a{
+    margin-right: 30px;
+    padding: 5px;
+    text-align: end;
+    text-decoration: underline;
+}
+.a h3{
+    display: inline;
+}
+.a p{
+    display: inline;
+}

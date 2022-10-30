@@ -1,0 +1,30 @@
+extends ../layouts/base.pug
+
+block title
+    title Registeration Form
+
+block styles
+    link(rel="stylesheet", href="/css/auth.css")
+
+block main-body
+    .main-div
+        .form-heading
+            h1 Register
+        form(action="/auth/register", method="post") 
+            .form-input
+                input(type="text", name="name", placeholder="Name" required)
+            .form-input
+                input(type="text", name="email", placeholder="Email" required)
+            .form-input
+                input(type="password" name="password" placeholder="Create a password" required)
+            .form-input
+                input(type="password" placeholder="Confirm a password" required)
+            .check-form
+                input(type="checkbox" id="tac" value="accepted" required)
+                label(for="tac") I accept all terms and conditions.
+            .submit
+                button(type="submit") Register
+        .end
+            p Already have an account? 
+                span
+                    a(href="/auth/login") Login Now
