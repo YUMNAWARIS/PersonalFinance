@@ -6,9 +6,9 @@ module.exports.account = function (req, res) {
         res.redirect('/');
     }
     else {
-        model.find({ id: req.session.user})
+        model.findOne({ id: req.session.user})
             .then(result => {
-                const user = result[0]
+                const user = result
                 res.render("Account/account",
                 {
                     title: `Profile ${user.name}`,
@@ -18,7 +18,7 @@ module.exports.account = function (req, res) {
             })
             .catch(err => {
                 console.log(err);
-                res.json(err)
+                res.render("Error/ServerError")
             })
     }
 };
@@ -32,7 +32,7 @@ module.exports.expense = function (req, res) {
         res.render("Account/expense",{expense});
     })
     .catch(err=>{
-        res.json(err)
+        res.render("Error/ServerError")    
     })
     
 };
@@ -42,13 +42,17 @@ module.exports.add = function (req, res) {
     const id = req.session.user;
     model.findOne({id:id})
     .then(result=>{
-        const {cost, tax} = req.body
+        const cost = req.body.cost
+        let tax = req.body.tax
+        if(!tax){
+            tax = 0;
+        }
         const total = eval(`${cost}+${tax}`)
         result.expenses.push({
             title : req.body.title,
             cost : req.body.cost,
-            tax : req.body.tax,
-            description : req.body.description,
+            tax : tax,
+            description : req.body.description || "",
             total : total,
             DateAdded : new Date()
         });
@@ -59,6 +63,7 @@ module.exports.add = function (req, res) {
     })
     .catch(err=>{
          console.log(err);
+         res.render("Error/ServerError")    
     })
 };
 
@@ -73,6 +78,6 @@ module.exports.delete = function (req, res) {
         })
     })
     .catch(err=>{
-        res.json(err)
+        res.render("Error/ServerError")
     })
 };

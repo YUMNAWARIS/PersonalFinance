@@ -10,6 +10,7 @@ block main-body
     .main-div
         .form-heading
             h1 Register
+        p.error #{error}
         form(action="/auth/register", method="post") 
             .form-input
                 input(type="text", name="name", placeholder="Name" required)

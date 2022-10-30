@@ -10,6 +10,7 @@ block main-body
     .main-div
         .form-heading
             h1 Login
+        p.error #{error}
         form(action="/auth/login", method="post") 
             .form-input
                 input(type="text", name="email", placeholder="Email")

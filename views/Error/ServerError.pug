@@ -1,0 +1,13 @@
+extends ../layouts/base.pug
+
+block title 
+    title 500 Server Error 
+
+block styles 
+    link(rel="stylesheet", href="style.css")
+
+block main-body
+    h1 Error Code 500
+    h5 Some Internal Server Error Occured in Processing your request 
+    p Go back to the home page 
+    a(href="/") home 
